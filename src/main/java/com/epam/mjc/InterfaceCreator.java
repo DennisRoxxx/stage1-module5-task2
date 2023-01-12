@@ -3,6 +3,12 @@ package com.epam.mjc;
 public class InterfaceCreator {
 
     public Operation<Integer> divideBy(Integer divider) {
-        throw new UnsupportedOperationException("You should implement this method.");
+        return x -> {
+            List<Integer> list = new ArrayList<>();
+            for (Integer integer : x) {
+                list.add(integer / divider);
+            }
+            return list;
+        };
     }
 }
